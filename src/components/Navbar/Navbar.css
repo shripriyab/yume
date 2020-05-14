@@ -1,0 +1,156 @@
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  background-color: #191b27;
+}
+
+.logo h1 {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.search-bar {
+  width: 70%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 7px;
+  color: #191b27;
+}
+
+#search-form {
+  width: calc(100% - 40px - 125px);
+}
+
+.submit {
+  position: absolute;
+  left: -9999px;
+}
+
+.search-icon {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon svg {
+  font-size: 20px;
+}
+
+#search-input {
+  font-size: 16px;
+  border: none;
+  padding: 0;
+  padding-left: 5px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: transparent;
+}
+
+.filter {
+  position: relative;
+  height: 100%;
+  padding-left: 5px;
+  width: 130px;
+}
+
+.filter:hover {
+  cursor: pointer;
+}
+
+.selected-filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.selected-filter p {
+  width: 70%;
+  text-align: center;
+}
+
+.selected-filter svg {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 12px;
+}
+
+.drop-down {
+  box-sizing: border-box;
+  background-color: #191b27;
+  position: absolute;
+  width: 100%;
+  color: #95a5a6;
+  padding: 12px;
+  font-size: 13px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.drop-down span {
+  display: inline-block;
+  width: 100%;
+  padding: 3px;
+}
+
+.drop-down span:hover {
+  color: #eee;
+  background-color: #222430;
+}
+
+.media-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.explore {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.explore h3:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 3px;
+  margin-top: 5px;
+  right: 0;
+  background-color: #eee;
+  transition: width 200ms ease;
+}
+
+.explore h3:hover:after {
+  width: 100%;
+  left: 0;
+  background-color: #eee;
+}
+
+#navbar > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#navbar > a:visited {
+  color: #fff;
+}
+
+@media only screen and (max-width: 820px) {
+  .search-bar {
+    width: 50%;
+  }
+}
