@@ -14,7 +14,7 @@ export default class Home extends Component {
           {categories.map(({ src, alt, name, desc }) => (
             <Link
               to={{
-                pathname: `/display/${name.replace(/ /g, "+").toLowerCase()}`,
+                pathname: `/display/${name.toLowerCase()}`,
                 state: {
                   isCategory: true,
                 },

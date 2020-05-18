@@ -14,17 +14,17 @@ export const categories = [
     desc: "Nature is amaze!",
   },
   {
-    name: "Food and Drink",
+    name: "Food",
     src:
       "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80",
-    alt: "Food and Drink",
+    alt: "Food",
     desc: "Nature is amaze!",
   },
   {
-    name: "Wallpapers",
+    name: "Backgrounds",
     src:
       "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-    alt: "Wallpapers",
+    alt: "Backgrounds",
     desc: "Nature is amaze!",
   },
   {
@@ -42,17 +42,17 @@ export const categories = [
     desc: "Nature is amaze!",
   },
   {
-    name: "Technology",
+    name: "Computer",
     src:
       "https://images.unsplash.com/photo-1585670641055-0c83de066b5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-    alt: "Technology",
+    alt: "Computer",
     desc: "Nature is amaze!",
   },
   {
-    name: "Interiors",
+    name: "Music",
     src:
-      "https://images.unsplash.com/photo-1520619831939-20749195c50f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=651&q=80",
-    alt: "Interiors",
+      "https://images.unsplash.com/photo-1484876065684-b683cf17d276?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+    alt: "Music",
     desc: "Nature is amaze!",
   },
   {
@@ -63,25 +63,25 @@ export const categories = [
     desc: "Nature is amaze!",
   },
   {
-    name: "Patterns",
+    name: "Education",
     src:
-      "https://images.unsplash.com/photo-1553526773-ec328c3a036d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-    alt: "Patterns",
+      "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    alt: "Education",
     desc: "Nature is amaze!",
   },
 
   {
-    name: "Work",
+    name: "Business",
     src:
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    alt: "Work",
+    alt: "Business",
     desc: "Nature is amaze!",
   },
   {
-    name: "Architecture",
+    name: "Buildings",
     src:
-      "https://images.unsplash.com/photo-1588623822094-00652cd43788?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
-    alt: "Architecture",
+      "https://images.unsplash.com/photo-1506422748879-887454f9cdff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    alt: "Buildings",
     desc: "Nature is amaze!",
   },
   {
@@ -92,17 +92,17 @@ export const categories = [
     desc: "Nature is amaze!",
   },
   {
-    name: "History",
+    name: "Science",
     src:
-      "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    alt: "History",
+      "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    alt: "Science",
     desc: "Nature is amaze!",
   },
   {
-    name: "Health and Wellness",
+    name: "Health",
     src:
       "https://images.unsplash.com/photo-1578880981498-3d60436ba825?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-    alt: "Health and Wellness",
+    alt: "Health",
     desc: "Nature is amaze!",
   },
 ];

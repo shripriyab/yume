@@ -7,7 +7,8 @@ export default class Display extends Component {
     super(props);
 
     this.state = {
-      imagesData: [],
+      data: [],
+      isImage: true,
     };
   }
 
@@ -25,6 +26,12 @@ export default class Display extends Component {
     const imageTypes = ["photo", "illustration", "vector", "all_images"];
 
     const type = imageTypes.includes(filter) ? "image" : "video";
+
+    if (type === "video") {
+      this.setState({
+        isImage: false,
+      });
+    }
 
     const apiType = imageTypes.includes(filter) ? "" : "videos";
 
@@ -49,7 +56,7 @@ export default class Display extends Component {
     const data = await this.getMedia(search, filter);
 
     this.setState({
-      imagesData: data.hits,
+      data: data.hits,
     });
   };
 
@@ -64,14 +71,31 @@ export default class Display extends Component {
   }
 
   render() {
-    const { imagesData } = this.state;
+    const { data, isImage } = this.state;
+
+    console.log(data);
 
     return (
-      <div>
-        {imagesData.map((image) => (
-          <img key={image.id} src={image.previewURL} alt={image.pageURL} />
-        ))}
-      </div>
+      <React.Fragment>
+        {data.map((element) =>
+          isImage ? (
+            <img src={element.largeImageURL} alt="" />
+          ) : (
+            <video
+              key={element.id}
+              width="320"
+              height="240"
+              controls
+              autoPlay={false}
+              muted
+              onMouseEnter={(e) => e.target.play()}
+              onMouseLeave={(e) => e.target.pause()}
+            >
+              <source type="video/mp4" src={element.videos.large.url} />
+            </video>
+          )
+        )}
+      </React.Fragment>
     );
   }
 }
