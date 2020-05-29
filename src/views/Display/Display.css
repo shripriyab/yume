@@ -1,0 +1,23 @@
+.masonry {
+  column-count: 4;
+  column-gap: 15px;
+  margin: 50px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .masonry {
+    column-count: 1;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import MediaCard from "../../components/MediaCard";
 
 import "./Display.css";
 
@@ -27,23 +28,24 @@ export default class Display extends Component {
 
     const type = imageTypes.includes(filter) ? "image" : "video";
 
-    if (type === "video") {
-      this.setState({
-        isImage: false,
-      });
-    }
-
     const apiType = imageTypes.includes(filter) ? "" : "videos";
 
     if (filter === "all_images" || filter === "all_videos") filter = "all";
 
     const q = search ? `&${query}=${search}` : "";
 
-    const URL = `https://pixabay.com/api/${apiType}?key=16339239-a4d8fce68cd767d9ac3d7474c${q}&${type}_type=${filter}`;
+    const URL = `https://pixabay.com/api/${apiType}?key=16339239-a4d8fce68cd767d9ac3d7474c${q}&${type}_type=${filter}&per_page=35`;
 
     const response = await fetch(URL);
 
-    return await response.json();
+    const data = await response.json();
+
+    const info = {
+      type,
+      data,
+    };
+
+    return info;
   };
 
   setData = async () => {
@@ -53,10 +55,11 @@ export default class Display extends Component {
 
     const filter = params.get("filter");
 
-    const data = await this.getMedia(search, filter);
+    const { type, data } = await this.getMedia(search, filter);
 
     this.setState({
       data: data.hits,
+      isImage: type === "image",
     });
   };
 
@@ -76,26 +79,11 @@ export default class Display extends Component {
     console.log(data);
 
     return (
-      <React.Fragment>
-        {data.map((element) =>
-          isImage ? (
-            <img src={element.largeImageURL} alt="" />
-          ) : (
-            <video
-              key={element.id}
-              width="320"
-              height="240"
-              controls
-              autoPlay={false}
-              muted
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => e.target.pause()}
-            >
-              <source type="video/mp4" src={element.videos.large.url} />
-            </video>
-          )
-        )}
-      </React.Fragment>
+      <div className="masonry">
+        {data.map((element) => (
+          <MediaCard key={element.id} isImage={isImage} mediaData={element} />
+        ))}
+      </div>
     );
   }
 }
