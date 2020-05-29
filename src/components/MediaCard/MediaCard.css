@@ -15,7 +15,7 @@
   border-radius: 16px;
 }
 
-svg {
+#overlay svg {
   background-color: hsla(0, 0%, 100%, 0.9);
   border: 1px solid transparent;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
@@ -24,7 +24,7 @@ svg {
   margin-right: 7px;
 }
 
-svg:not(:root).svg-inline--fa {
+#overlay svg:not(:root).svg-inline--fa {
   height: 15px;
   width: 15px;
 }
