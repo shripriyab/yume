@@ -10,6 +10,18 @@ import {
 
 import "./MediaCard.css";
 
+function mmss(secs) {
+  var minutes = Math.floor(secs / 60);
+  secs = secs % 60;
+
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if (secs < 10) {
+    secs = "0" + secs;
+  }
+  return minutes + ":" + secs;
+}
 export default class MediaCard extends Component {
   constructor(props) {
     super(props);
@@ -63,9 +75,7 @@ export default class MediaCard extends Component {
     ) : (
       <div className="item">
         <video
-          width="320"
-          height="240"
-          controls
+          controls={false}
           autoPlay={false}
           muted
           onMouseEnter={(e) => e.target.play()}
@@ -73,6 +83,10 @@ export default class MediaCard extends Component {
         >
           <source type="video/mp4" src={mediaData.videos.large.url} />
         </video>
+        <div className="desc">
+          <p>{mmss(mediaData.duration)}</p>
+          <p>{mediaData.user}</p>
+        </div>
       </div>
     );
   }

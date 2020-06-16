@@ -4,6 +4,13 @@
   margin: 50px;
 }
 
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  margin: 25px;
+}
+
 @media only screen and (max-width: 1250px) {
   .masonry {
     column-count: 3;
@@ -16,8 +23,17 @@
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .masonry {
     column-count: 1;
+  }
+  .video-grid {
+    grid-template-columns: 1fr;
   }
 }

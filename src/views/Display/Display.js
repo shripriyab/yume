@@ -34,7 +34,9 @@ export default class Display extends Component {
 
     const q = search ? `&${query}=${search}` : "";
 
-    const URL = `https://pixabay.com/api/${apiType}?key=16339239-a4d8fce68cd767d9ac3d7474c${q}&${type}_type=${filter}&per_page=35`;
+    const perPage = type === "image" ? 35 : 9;
+
+    const URL = `https://pixabay.com/api/${apiType}?key=16339239-a4d8fce68cd767d9ac3d7474c${q}&${type}_type=${filter}&per_page=${perPage}`;
 
     const response = await fetch(URL);
 
@@ -76,10 +78,8 @@ export default class Display extends Component {
   render() {
     const { data, isImage } = this.state;
 
-    console.log(data);
-
     return (
-      <div className="masonry">
+      <div className={isImage ? "masonry" : "video-grid"}>
         {data.map((element) => (
           <MediaCard key={element.id} isImage={isImage} mediaData={element} />
         ))}
