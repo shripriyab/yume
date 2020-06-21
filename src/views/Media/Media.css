@@ -1,0 +1,162 @@
+.media-container {
+  display: flex;
+  margin: 30px;
+}
+
+.image-style,
+.video-style {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-style img,
+.video-style video {
+  max-height: calc(100vh - 110px - 25px);
+  max-width: 60vw;
+  object-fit: contain;
+}
+
+.media-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  width: 30%;
+  max-height: calc(100vh - 110px - 25px);
+}
+
+.media-details > div {
+  margin-bottom: 20px;
+}
+
+.media-stats {
+  flex-wrap: wrap;
+}
+
+.media-stats > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.media-stats svg {
+  margin-right: 5px;
+}
+
+.media-stats,
+.user-info,
+.media-tags {
+  display: flex;
+}
+
+.user-info {
+  align-items: center;
+}
+
+.user-info img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.media-tags {
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.media-tags > button {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 2px 10px;
+  text-transform: capitalize;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  background: white;
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+.download-button a {
+  border-radius: 10px;
+}
+
+.download-button a,
+.share-button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px;
+  background: #042a5c;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Montserrat";
+  border-radius: 10px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  transition: background 300ms;
+}
+
+.download-button svg,
+.share-button svg {
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.download-button > a:hover,
+.download-button > a:focus,
+.share-button > button:hover,
+.share-button > button:focus {
+  cursor: pointer;
+  background: #060613;
+}
+
+.download-button > a,
+.download-button > a:visited {
+  text-decoration: none;
+}
+
+.media-tags > button:hover {
+  cursor: pointer;
+  background-color: #0c44a8;
+  color: white;
+  border: 1px solid #0c44a8;
+}
+
+@media only screen and (max-width: 1250px) {
+  .media-container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .image-style,
+  .video-style {
+    margin-bottom: 30px;
+  }
+
+  .image-style img,
+  .video-style video {
+    max-height: calc(100vh - 110px - 25px);
+  }
+
+  .media-details {
+    max-height: calc(100vh - 110px - 25px);
+    width: 60vw;
+    margin-left: 0;
+  }
+}

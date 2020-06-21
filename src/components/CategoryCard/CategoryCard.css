@@ -43,10 +43,10 @@
   position: absolute;
   z-index: 2;
   bottom: 13px;
-  width: 95%;
+  width: 200px;
   margin: 0;
   color: white;
-  padding-left: 20px;
+  padding-left: 5px;
 }
 
 .card-text > h3 {
@@ -57,6 +57,7 @@
 }
 
 .card-text > p {
+  font-size: 14px;
   margin: 0;
   animation: fadeIn ease 400ms;
 }

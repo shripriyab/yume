@@ -37,3 +37,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+.masonry > a:visited,
+.video-grid > a:visited,
+.masonry > a:hover,
+.video-grid > a:hover {
+  color: black;
+}

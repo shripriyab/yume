@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MediaCard from "../../components/MediaCard";
 
 import "./Display.css";
+import { Link } from "react-router-dom";
 
 export default class Display extends Component {
   constructor(props) {
@@ -81,7 +82,18 @@ export default class Display extends Component {
     return (
       <div className={isImage ? "masonry" : "video-grid"}>
         {data.map((element) => (
-          <MediaCard key={element.id} isImage={isImage} mediaData={element} />
+          <Link
+            to={{
+              pathname: `/media/${element.id}`,
+              state: {
+                mediaData: element,
+                isImage: isImage,
+              },
+            }}
+            key={element.id}
+          >
+            <MediaCard isImage={isImage} mediaData={element} />
+          </Link>
         ))}
       </div>
     );
