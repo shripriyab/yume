@@ -54,7 +54,7 @@ class Navbar extends React.Component {
 
     return (
       <nav id="navbar">
-        <Link to="/">
+        <Link to="/" className = "grid-logo">
           <div className="logo">
             <h1>Yume</h1>
           </div>
@@ -128,7 +128,7 @@ class Navbar extends React.Component {
             )}
           </div>
         </div>
-        <Link to="/explore">
+        <Link to="/explore"  className = "grid-explore">
           <div className="explore">
             <h3>Explore</h3>
           </div>
