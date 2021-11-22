@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import MediaCard from "../../components/MediaCard";
 
@@ -31,7 +32,18 @@ export default class Explore extends Component {
     return (
       <div className="masonry">
         {images.map((element) => (
-          <MediaCard key={element.id} isImage mediaData={element} />
+            <Link
+            to={{
+              pathname: `/media/${element.id}`,
+              state: {
+                mediaData: element,
+                isImage: true,
+              },
+            }}
+            key={element.id}
+          >
+            <MediaCard key={element.id} isImage mediaData={element} />
+          </Link>
         ))}
       </div>
     );
